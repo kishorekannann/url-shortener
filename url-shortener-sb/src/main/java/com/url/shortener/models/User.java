@@ -1,5 +1,6 @@
 package com.url.shortener.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,6 +14,7 @@ public class User {
     private Long id;
     private String email;
     private String username;
+    @JsonIgnore
     private String password;
     private String role = "ROLE_USER";
 }

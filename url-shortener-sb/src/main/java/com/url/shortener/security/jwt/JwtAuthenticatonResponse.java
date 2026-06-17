@@ -7,4 +7,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class JwtAuthenticatonResponse {
     private String token;
+    private String tokenType = "Bearer";
+
+    public JwtAuthenticatonResponse(String token) {
+        this.token = token;
+    }
 }

@@ -2,6 +2,7 @@ package com.url.shortener.service;
 
 import com.url.shortener.models.User;
 import com.url.shortener.repository.UserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
+@AllArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     UserRepository userRepository;
